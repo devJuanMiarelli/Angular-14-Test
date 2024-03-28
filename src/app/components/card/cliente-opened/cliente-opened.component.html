@@ -1,0 +1,41 @@
+<section class="container center ff-montserrat">
+  <div class="bordas">
+    <header class="d-flex-titulo">
+      <h2>Detalhes</h2>
+      <button routerLink="/card/update/{{ cliente.id }}" class="editar">
+        <i class="material-icons">edit</i>
+      </button>
+      <button (click)="voltar()" class="voltar botao">
+        voltar
+      </button>
+    </header>
+    <div class="geral">
+      <div class="campos">
+        <p class="nomes">Nome:</p>
+        <p>{{ cliente.nome }}</p>
+      </div>
+      <div class="campos">
+        <p class="nomes">CPF:</p>
+        <p>{{ cliente.cpf }}</p>
+      </div>
+      <div class="campos">
+        <p class="nomes">Data de nascimento:</p>
+        <p>{{ cliente.dataNascimento }}</p>
+      </div>
+      <div class="campos">
+        <p class="nomes">Renda:</p>
+        <p>{{ cliente.renda }}</p>
+      </div>
+      <div class="campos">
+        <p class="nomes">E-mail:</p>
+        <p>{{ cliente.email }}</p>
+      </div>
+      <div class="campos">
+        <p class="nomes">Data de cadastro:</p>
+        <p>{{ cliente.dataCadastro }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+

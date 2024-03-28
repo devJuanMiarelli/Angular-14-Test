@@ -1,0 +1,91 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 60%;
+
+  border: solid 2px #00586F;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  margin: 2rem 3rem;
+}
+
+form label {
+  color: #0A4A5B;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+form .input {
+  border: none;
+  height: 16px;
+  padding: 1rem 2rem;
+  border: solid 2px #7FABB7;
+  border-radius: 12px;
+  margin: 0.5rem 0 2rem;
+}
+
+.botoes {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container-radio {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  font-size: 16px;
+  margin: .5rem 0 2rem 0;
+}
+
+.container-radio input {
+  width: 16px;
+  height: 16px;
+}
+
+.radio-model label {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.erro {
+  font-size: 12px;
+  margin-left: 5px;
+  color: #E6173E;
+  margin-top: -25px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.info {
+  font-size: 12px;
+  margin-left: 5px;
+  color: #000000;
+  margin-top: -25px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.botao_desabilitado {
+  background: #9e9e9e;
+  color: #ffffff;
+  width: 146px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px 8px 16px;
+  transition: 0.5s ease;
+  text-align: center;
+  cursor: pointer;
+}

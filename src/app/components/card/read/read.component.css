@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.sem-clientes {
+  text-align: center;
+  padding: 80px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.d-flex-header {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.d-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.nome-campos {
+  width: 95%;
+  height: 38px;
+  border-radius: 16px 0;
+  background-color: #11728B;
+  color: #FFFFFF;
+}
+
+.dados {
+  width: auto;
+  height: 19px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.delete {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  color: #FFFFFF;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.buscar {
+  display: flex;
+  justify-content: center;
+  border: solid 2px #11728B;
+  border-radius: 20px;
+  font-size: inherit;
+  padding: 4px;
+}
+
+.buscar input {
+  border: none;
+}
+
+
+
+
+
+

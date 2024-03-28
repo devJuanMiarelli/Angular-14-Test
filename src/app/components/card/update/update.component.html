@@ -1,0 +1,77 @@
+<section class="container ff-montserrat">
+  <header class="titulo">
+    <h2>Altere as informações de um cliente</h2>
+  </header>
+
+  <form [formGroup]="form">
+    <label for="nome">Nome: </label>
+    <input class="input" type="text" formControlName="nome" id="pensamento" placeholder="Digite seu nome">
+    <div class="erro" *ngIf="form.get('nome')?.errors?.['required'] && form.get('nome')?.touched">Nome é obrigatório.</div>
+    <div class="erro" *ngIf="form.get('nome')?.errors?.['pattern'] && form.get('nome')?.touched">Nome é obrigatório.</div>
+    <div class="erro" *ngIf="form.get('nome')?.errors?.['semSobrenome'] && form.get('nome')?.touched">Deve conter pelo menos um sobrenome.</div>
+
+    <label for="cpf">CPF: </label>
+    <input class="input" type="text" formControlName="cpf" id="cpf" placeholder="Digite seu cpf" readonly>
+    <div class="info">CPF não pode ser alterado.</div>
+
+
+    <label for="dataNascimento">Data de nascimento: </label>
+    <input class="input" type="date" formControlName="dataNascimento" id="dataNascimento" placeholder="Digite sua data de nascimento">
+    <div class="erro" *ngIf="form.get('dataNascimento')?.errors?.['required'] && form.get('dataNascimento')?.touched">Data de nascimento é obrigatória.</div>
+    <div class="erro" *ngIf="form.get('dataNascimento')?.errors?.['pattern'] && form.get('dataNascimento')?.touched">Data de nascimento é obrigatória.</div>
+    <div class="erro" *ngIf="form.get('dataNascimento')?.errors?.['idadeInvalida'] && form.get('dataNascimento')?.touched">Você deve ter entre 18 e 60 anos para cadastrar-se.</div>
+
+    <label for="renda">Renda mensal: </label>
+    <div class="container-radio">
+      <div class="radio-model">
+        <label for="valor1">
+        <input type="radio" id="valor1" formControlName="renda" value="valor1">
+        <div>
+          <p>Abaixo R$2000,00</p>
+        </div>
+        </label>
+      </div>
+      <div class="radio-model">
+        <label for="valor2">
+        <input type="radio" id="valor2" formControlName="renda" value="valor2">
+        <div>
+          <p>R$2000,00-4500,00</p>
+        </div>
+        </label>
+      </div>
+      <div class="radio-model">
+        <label for="valor3">
+        <input type="radio" id="valor3" formControlName="renda" value="valor3">
+        <div>
+          <p>R$4500,00-10000,00</p>
+        </div>
+        </label>
+      </div>
+      <div class="radio-model">
+        <label for="valor4">
+        <input type="radio" id="valor4" formControlName="renda" value="valor4">
+        <div>
+          <p>Acima R$10000,00</p>
+        </div>
+        </label>
+      </div>
+    </div>
+    <div class="erro" *ngIf="form.get('renda')?.errors && form.get('renda')?.touched">Renda mensal é obrigatória.</div>
+
+    <label for="email">E-mail: </label>
+    <input class="input" type="email" id="email" formControlName="email" placeholder="Digite seu E-mail">
+    <div class="erro" *ngIf="form.get('email')?.errors?.['required'] && form.get('email')?.touched">E-mail é obrigatório.</div>
+    <div class="erro" *ngIf="form.get('email')?.errors?.['email'] && form.get('email')?.touched">E-mail inválido.</div>
+
+    <label for="dataCadastro">Data de cadastro: </label>
+    <input class="input" type="date" id="dataCadastro" formControlName="dataCadastro" placeholder="Digite sua data de cadastro">
+    <div class="erro" *ngIf="form.get('dataCadastro')?.errors?.['required'] && form.get('dataCadastro')?.touched">Data de cadastro é obrigatória.</div>
+    <div class="erro" *ngIf="form.get('dataCadastro')?.errors?.['pattern'] && form.get('dataCadastro')?.touched">Data de cadastro é obrigatória.</div>
+    <div class="erro" *ngIf="form.get('dataCadastro')?.errors?.['dataFutura'] && form.get('dataCadastro')?.touched">A data está incorreta. Não pode ser maior do que o dia de hoje.</div>
+
+    <div class="botoes">
+      <button [ngClass]="desabilitar()" [disabled]="!form.valid" (click)="updateClient()">Salvar alterações</button>
+      <button class="botao" (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+</section>

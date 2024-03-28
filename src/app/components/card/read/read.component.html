@@ -1,0 +1,31 @@
+<section class="container gap">
+  <header class="titulo d-flex-header">
+    <h2 class="ff-montserrat">Clientes cadastrados</h2>
+    <div class="buscar">
+      <input type="search" class="buscar" placeholder="Buscar por cliente" [(ngModel)]="filter" (keyup)="filterClients()">
+      <i class="material-icons">search</i>
+    </div>
+    <button routerLink="/create" class="botao hover">Cadastrar</button>
+  </header>
+  <div class="d-flex-container">
+    <div class="nome-campos d-flex ff-montserrat">
+      <p class="dados">Nome:</p>
+      <p class="dados">CPF:</p>
+      <p class="dados">Data de cadastro:</p>
+      <p class="dados">Renda:</p>
+      <div class="delete">
+        <i class="material-icons">delete</i>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="clientesList.length > 0; else noClients">
+    <div *ngFor="let cliente of clientesList">
+      <app-cliente [cliente]="cliente"></app-cliente>
+    </div>
+  </div>
+</section>
+<ng-template #noClients>
+  <div class="sem-clientes ff-montserrat">
+    <p>Nenhum cliente cadastrado até o momento.</p>
+  </div>
+</ng-template>

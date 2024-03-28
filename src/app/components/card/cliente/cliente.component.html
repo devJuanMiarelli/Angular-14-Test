@@ -1,0 +1,11 @@
+<div class="d-flex-container">
+  <div (click)="mostrarDetalhes(cliente)" class="cliente d-flex ff-montserrat">
+    <p class="dados ff-montserrat">{{ cliente.nome }}</p>
+    <p class="dados ff-montserrat">{{ cliente.cpf }}</p>
+    <p class="dados ff-montserrat">{{ cliente.dataCadastro }}</p>
+    <p class="dados ff-montserrat">{{ cliente.renda }}</p>
+    <button routerLink="/card/delete/{{ cliente.id }}" class="botao-delete delete">
+      <i class="material-icons">delete</i>
+    </button>
+  </div>
+</div>
